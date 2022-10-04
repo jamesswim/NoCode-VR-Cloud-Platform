@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snap!Ionic 7.2.5 - Build Your Own Blocks</title>
+        <link rel="icon" href="src/favicon.ico" type="image/x-icon">
+        <link rel="manifest" href="manifest.json">
+        <link rel="apple-touch-icon" href="img/snap-icon-152.png">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="white"/>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Snap!">
+        <meta name="msapplication-TileImage" content="img/snap-icon-144.png">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+
+        <script src="websrc/jquery.js"></script>
+        <script type="text/javascript" src="websrc/jquery.qrcode.js"></script>
+        <script type="text/javascript" src="websrc/qrcode.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="websrc/bootstrap-treeview.js"></script>
+        <script src="websrc/mqtt.min.js"></script>
+
+        <script src="websrc/loadingoverlay.min.js"></script>
+
+        <link rel="stylesheet" href="websrc/jquery-ui.css">
+        <script src="websrc/jquery-ui.js"></script>
+        <link rel="stylesheet" href="websrc/style.css">
+
+        <script src="websrc/base64.min.js"></script>
+
+        <script src="src/morphic.js?version=2022-01-28"></script>
+        <script src="src/symbols.js?version=2021-03-03"></script>
+        <script src="src/widgets.js?version=2021-17-09"></script>
+		<script src="src/widgetsPlus.js?version=2021-17-09"></script>
+        <script src="src/blocks.js?version=2022-02-25"></script>
+        <script src="src/blocksPlus.js?version=2020-08-25"></script>
+        <script src="src/threads.js?version=2022-02-26"></script>
+        <script src="src/objects.js?version=2022-02-22"></script>
+        <script src="src/objectsPlus.js?version=2020-08-25"></script>
+
+        <script src="src/scenes.js?version=2021-11-24"></script>
+
+        <script src="src/gui.js?version=2022-02-26"></script>
+        <script src="src/guiPlus.js?version=2020-08-25"></script>
+        <script src="src/paint.js?version=2021-07-05"></script>
+        <script src="src/lists.js?version=2022-02-07"></script>
+        <script src="src/byob.js?version=2020-07-24"></script>
+        <script src="src/byobPlus.js?version=2022-02-17"></script>
+        <script src="src/tables.js?version=2022-01-28"></script>
+        <script src="src/sketch.js?version=2021-11-03"></script>
+        <script src="src/video.js?version=2019-06-27"></script>
+        <script src="src/maps.js?version=2021-06-15"></script>
+
+        <script src="src/extensions.js?version=2022-02-08"></script>
+
+        <script src="src/xml.js?version=2021-07-05"></script>
+        <script src="src/store.js?version=2022-01-02"></script>
+        <script src="src/storePlus.js?version=2021-12-28"></script>
+        <script src="src/locale.js?version=2022-02-22"></script>
+        <script src="src/cloud.js?version=2021-02-04"></script>
+        <script src="src/cloudPlus.js?version=2020-08-25"></script>
+        <script src="src/api.js?version=2022-01-03"></script>
+        <script src="src/sha512.js?version=2019-06-27"></script>
+        <script src="src/md5.js?version=2020-08-25"></script>
+        <script src="src/FileSaver.min.js?version=2019-06-27"></script>
+        <script>
+            var world;
+            window.labelWidth = 400; // FCC 2020/12/08
+            window.onload = function () {
+                world = new WorldMorph(document.getElementById('world'));
+                new IDE_Morph().openIn(world);
+                loop();
+            };
+            function loop() {
+                requestAnimationFrame(loop);
+                world.doOneCycle();
+            }
+        </script>
+
+        <style>
+            .log {
+                position: fixed;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5);
+                color: #f1f1f1;
+                width: 100%;
+                padding: 0px;
+                z-index: 9999;
+            }
+            .comments{
+                display: block;
+                list-style: none;
+                width: 100%;
+                height: 200px;
+                overflow-y: auto;
+            }
+            .comment {
+                display: block;
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
+            .buttondiv {
+                position: fixed;
+                bottom: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.5);
+                color: #f1f1f1;
+                margin : 0px 20px 0px 0px;
+                z-index: 9999;
+            }
+        </style>
+    </head>
+    <body style="margin: 0;">
+        <div id="loading-control" >
+
+            <div id="dialog" title="建立專案">
+                <form>
+                    <fieldset>
+                        <label for="projectname">專案名稱</label>
+                        <input type="text" id="projectname" class="text ui-widget-content ui-corner-all">
+                        <label for="projectmode">檔案類型</label>
+                        <select id="projectmode" >
+                            <option>blank</option>
+                            <option>sidemenu</option>
+                            <option>tutorial</option>
+                            <option>tabs</option>
+                            <option>super</option>
+                        </select>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;margin-top:2%;padding-bottom:2%;" id="mySidebar">
+                <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">關閉 &times;</button>
+                <!--<button id="opener">新建專案</button>
+                <button onclick="runproject()">執行專案</button>
+                <button onclick="closedemo()">停止執行</button>-->
+                <button onclick="openother()">返回根目錄</button>
+				<button onclick="removeAll()">全部刪除</button>
+                <!--<button onclick="build()">打包下載</button>-->
+			
+                <!--<div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">默认
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="#">功能</a>
+                        </li>
+                        <li>
+                            <a href="#">另一个功能</a>
+                        </li>
+                        <li>
+                            <a href="#">其他</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">分离的链接</a>
+                        </li>
+                    </ul>
+                </div>-->
+
+                <div>
+                    <input id="file" type="file" onchange="updateMenu(this)" style="display: none" />
+
+                </div>
+
+                <div id="treeview">loading...</div>
+            </div>
+
+
+            <div id="main">
+                <canvas id="world" tabindex="1" style="position: absolute;"></canvas>
+            </div>
+
+        </div>	
+
+        <div class="log" id="log" style="height: 0px;">
+            <ul class="comments">
+            </ul>
+        </div>
+
+        <div class="buttondiv" id="buttondiv">
+            <button id="logbutton" style="background: rgba(0, 0, 0, 0.5); color: #f1f1f1;" onclick="logwindow()">log</button>
+        </div>
+
+        <script src="src/filesys.js?version=2019-06-27"></script>    
+		</body>
+</html>
+
