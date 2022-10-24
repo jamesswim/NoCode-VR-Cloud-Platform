@@ -35,6 +35,8 @@ SpriteMorph.prototype.blockColor['react'] = new Color(4, 148, 220);
 //eric 20221003 ar/vr
 SpriteMorph.prototype.categories.push('AR/VR');
 SpriteMorph.prototype.blockColor['AR/VR'] = new Color(4, 148, 220);
+SpriteMorph.prototype.categories.push('AR/VR2');
+SpriteMorph.prototype.blockColor['AR/VR2'] = new Color(4, 148, 220);
 //eric 20210520 vue
 SpriteMorph.prototype.categories.push('vue');
 SpriteMorph.prototype.blockColor['vue'] = new Color(4, 148, 220);

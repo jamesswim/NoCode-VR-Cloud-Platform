@@ -1248,11 +1248,11 @@ IDE_Morph.prototype.createCategories = function () {
 
         myself.categories.children.forEach((button, i) => {
             i += 1;
-            if (i <= 16) {
+            if (i <= 17) {
                 row = Math.ceil(i / 2);
                 col = 2 - (i % 2);
             } else {
-                row = 8 + (i - 16)
+                row = 9 + (i - 17)
                 col = 1;
             }
             button.setPosition(new Point(
@@ -1267,7 +1267,7 @@ IDE_Morph.prototype.createCategories = function () {
             scroller.acceptsDrops = false;
             scroller.contents.acceptsDrops = false;
             scroller.setPosition(
-                    new Point(0, myself.categories.children[16].top())
+                    new Point(0, myself.categories.children[17].top())
                     );
             scroller.setWidth(myself.paletteWidth);
             scroller.setHeight(buttonHeight * 6 + yPadding * 5);
@@ -1278,15 +1278,15 @@ IDE_Morph.prototype.createCategories = function () {
             myself.categories.add(scroller);
             myself.categories.scroller = scroller;
             myself.categories.setHeight(
-                    (8 + 1) * yPadding
-                    + 8 * buttonHeight
+                    (9 + 1) * yPadding
+                    + 9 * buttonHeight
                     + 6 * (yPadding + buttonHeight) + border + 2
                     + 2 * border
                     );
         } else {
             myself.categories.setHeight(
-                    (8 + 1) * yPadding
-                    + 8 * buttonHeight
+                    (9 + 1) * yPadding
+                    + 9 * buttonHeight
                     + (more ?
                             (more * (yPadding + buttonHeight) + border + 2)
                             : 0)
