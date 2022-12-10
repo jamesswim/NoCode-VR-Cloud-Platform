@@ -1248,7 +1248,7 @@ IDE_Morph.prototype.createCategories = function () {
 
         myself.categories.children.forEach((button, i) => {
             i += 1;
-            if (i <= 17) {
+            if (i <= 18) {
                 row = Math.ceil(i / 2);
                 col = 2 - (i % 2);
             } else {
@@ -1267,13 +1267,13 @@ IDE_Morph.prototype.createCategories = function () {
             scroller.acceptsDrops = false;
             scroller.contents.acceptsDrops = false;
             scroller.setPosition(
-                    new Point(0, myself.categories.children[17].top())
+                    new Point(0, myself.categories.children[18].top())
                     );
             scroller.setWidth(myself.paletteWidth);
             scroller.setHeight(buttonHeight * 6 + yPadding * 5);
 
             for (i = 0; i < more; i += 1) {
-                scroller.addContents(myself.categories.children[8]);
+                scroller.addContents(myself.categories.children[9]);
             }
             myself.categories.add(scroller);
             myself.categories.scroller = scroller;
