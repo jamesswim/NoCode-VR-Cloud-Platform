@@ -57,11 +57,10 @@ This project, "No-Code VR Cloud Integrated Development Platform," aims to provid
 
 ## 空戰模擬範例展示 (Air Combat Simulation Showcase)
 
-*(可以放幾張空戰模擬的截圖或 GIF 動圖)*
 
-* **環境模擬 (Environment Simulation):** (如森林場景)
-* **戰機展示 (Fighter Jet Showcase):** (F-35E, plane 模型，不同視角)
-* **武器系統操作 (Weapon System Operation):** (機關槍射擊、飛彈鎖定與發射、爆炸效果)
+* **環境模擬 (Environment Simulation):** 
+* **戰機展示 (Fighter Jet Showcase):** F-35E, plane 模型，不同視角
+* **武器系統操作 (Weapon System Operation):** 機關槍射擊、飛彈鎖定與發射、爆炸效果
 
 ## 已知問題與未來展望 (Known Issues and Future Work)
 
