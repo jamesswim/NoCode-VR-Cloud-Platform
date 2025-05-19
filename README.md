@@ -20,8 +20,8 @@ This project, "No-Code VR Cloud Integrated Development Platform," aims to provid
 
 * 建立 VR 場景 (Create VR scenes)
 * 建立、設定及控制物件 (Create, configure, and control objects)
-* 實現多人連線 (Implement multi-user connectivity) - *[請確認此目標的完成度並據實撰寫]*
-* 支援 VR 設備控制 (Support VR device control) - *[請確認此目標的完成度並據實撰寫]*
+* 實現多人連線 (Implement multi-user connectivity)
+* 支援 VR 設備控制 (Support VR device control)
 * 整合 VR 物理系統 (Integrate VR physics system)
 * 提供教學範例 (Provide tutorial examples - e.g., the air combat simulation)
 * 設計 VR 使用者介面 (Design a VR user interface via the block system)
