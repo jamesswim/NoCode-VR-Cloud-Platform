@@ -1,5 +1,3 @@
-# NoCode-VR-Cloud-Platform
-A no-code cloud-based development platform for creating Virtual Reality (VR) experiences, demonstrated with an air combat simulation example. This project aims to provide an easy-to-use, block-based interface for VR development using technologies like A-Frame and Snap! 
 # 無代碼 VR 雲端整合開發平台: 以空戰模擬為例 (No-Code VR Cloud Integrated Development Platform: Air Combat Simulation Example)
 
 
