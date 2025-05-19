@@ -56,7 +56,7 @@ This project, "No-Code VR Cloud Integrated Development Platform," aims to provid
 7.  (可選) 加入 A-FrameComponent 區或 A-FrameJS 區的積木以實現更複雜的功能 (如戰機、武器系統)。
 
 ## 空戰模擬範例展示 (Air Combat Simulation Showcase)
-![拖拉積木搭建場景](htps://github.com/user-attachments/assets/03d9c601-1e08-4dbf-9b8f-29a34c630a33)
+![拖拉積木搭建場景](https://github.com/user-attachments/assets/03d9c601-1e08-4dbf-9b8f-29a34c630a33)
 *圖1：搭建場景流程*
 * **環境模擬 (Environment Simulation):** 
 * **戰機展示 (Fighter Jet Showcase):** F-35E, plane 模型，不同視角
