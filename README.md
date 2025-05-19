@@ -47,7 +47,6 @@ This project, "No-Code VR Cloud Integrated Development Platform," aims to provid
 
 ## Snap!VR 平台操作流程 (Snap!VR Platform Usage Flow)
 
-*(可以簡述或引用報告中的表 3.2 步驟)*
 1.  使用 HTML 區塊建立基本 HTML 框架。
 2.  匯入 A-Frame 函式庫。
 3.  建立 `<a-scene>` 場景。
@@ -63,17 +62,6 @@ This project, "No-Code VR Cloud Integrated Development Platform," aims to provid
 * **環境模擬 (Environment Simulation):** (如森林場景)
 * **戰機展示 (Fighter Jet Showcase):** (F-35E, plane 模型，不同視角)
 * **武器系統操作 (Weapon System Operation):** (機關槍射擊、飛彈鎖定與發射、爆炸效果)
-
-## 如何開始 (Getting Started / Installation)
-
-*(這部分需要您根據專案的實際情況填寫)*
-
-例如：
-1.  Clone 本倉庫：`git clone https://github.com/YourUsername/YourRepositoryName.git`
-2.  進入專案目錄：`cd YourRepositoryName`
-3.  (如果需要本地伺服器) 啟動本地伺服器，例如使用 Python：`python -m http.server` 或 Node.js 的 `live-server`。
-4.  在瀏覽器中開啟 `index.html` (或其他主檔案)。
-5.  *(如果有特別的依賴或設定步驟，請在此說明)*
 
 ## 已知問題與未來展望 (Known Issues and Future Work)
 
@@ -111,11 +99,5 @@ This project, "No-Code VR Cloud Integrated Development Platform," aims to provid
 
 * 感謝鄭福烱教授的指導與實驗室支援。
 * 感謝 Eric 工程師在平台開發知識上的教導。
-* (若有其他感謝對象可一併列出)
 
-## 授權條款 (License)
 
-*(建議選擇一個開源授權條款，例如 MIT License 或 Apache License 2.0。如果沒有特別選擇，可以暫時不寫，或寫上 "All Rights Reserved" 並註明學術用途。)*
-
-例如：
-This project is licensed under the MIT License - see the LICENSE.md file for details.
