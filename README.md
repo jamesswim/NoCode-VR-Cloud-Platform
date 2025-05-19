@@ -42,8 +42,8 @@ This project, "No-Code VR Cloud Integrated Development Platform," aims to provid
         * 武器系統 (Weapon systems - machine guns, missiles with tracking)
         * 碰撞偵測 (Collision detection)
         * 爆炸特效 (Explosion effects)
-* **多人連線 (Networking - if applicable):** Networked-Aframe (使用 WebRTC 或 WebSocket) - *[請確認並詳細說明多人連線的實作情況]*
-* **物理引擎 (Physics Engine):** aframe-physics-system (雖然報告中提到移除部分物理效果，但仍可提及基礎的碰撞檢測)
+* **多人連線 (Networking - if applicable):** Networked-Aframe (使用 WebRTC 或 WebSocket)
+* **物理引擎 (Physics Engine):** aframe-physics-system (基礎的碰撞檢測)
 
 ## Snap!VR 平台操作流程 (Snap!VR Platform Usage Flow)
 
