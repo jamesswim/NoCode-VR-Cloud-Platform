@@ -63,6 +63,7 @@ This project, "No-Code VR Cloud Integrated Development Platform," aims to provid
 ![用積木建立戰機)](https://github.com/user-attachments/assets/b0702066-3a53-4fe6-a105-563374213173)
 
 * **武器系統操作 (Weapon System Operation):** 機關槍射擊、飛彈鎖定與發射、爆炸效果
+![飛彈鎖定與發射](https://github.com/user-attachments/assets/cd143ba1-50bf-4de2-b88a-1722ea4cfa26)
 
 ## 已知問題與未來展望 (Known Issues and Future Work)
 
