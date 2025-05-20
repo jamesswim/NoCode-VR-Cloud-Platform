@@ -101,6 +101,3 @@ This project, "No-Code VR Cloud Integrated Development Platform," aims to provid
 
 * 感謝鄭福烱教授的指導與實驗室支援。
 * 感謝 Eric 工程師在平台開發知識上的教導。
-
-
->>>>>>> 5316f276e057f4bd4ac899211ad399147bcdf0fd
